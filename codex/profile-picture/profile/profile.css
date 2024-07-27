@@ -1,0 +1,218 @@
+/* Profile Section */
+.profile-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+    z-index: 1000;
+    display: none;
+    overflow-y: auto;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.close-profile-icon,
+.add-icon,
+.gear-icon,
+.options-icon {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.add-icon {
+    font-size: 24px;
+    color: #000 !important;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.options-container {
+    display: flex;
+    align-items: center;
+}
+
+.add-dropdown,
+.options-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+.add-dropdown a,
+.options-dropdown a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.add-dropdown a:hover,
+.options-dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+.profile-content {
+    padding: 20px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo-large {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-details {
+    flex-grow: 1;
+}
+
+.username {
+    font-size: 24px;
+    margin: 0;
+}
+
+.followers {
+    font-size: 16px;
+    color: #777;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-profile-btn {
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    border: 1px solid #000;
+}
+
+.update-profile-btn {
+    background-color: #ffc107;
+}
+
+.thin-line {
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+.additional-info p {
+    margin: 10px 0;
+}
+
+.additional-info span {
+    font-weight: bold;
+}
+
+.edit-input {
+    width: calc(100% - 10px);
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid #000;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.profile-tabs {
+    margin-top: 20px;
+}
+
+.tabs {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.tabs::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+.tab {
+    flex: 1 0 auto;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    scroll-snap-align: center;
+}
+
+.tab.active {
+    border-bottom: 2px solid #007bff;
+    font-weight: bold;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.video-item,
+.short-item,
+.post-item,
+.like-item,
+.save-item,
+.comment-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.tabs.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+
+/* Positioning the add-icon, gear-icon, and options-icon */
+.options-container .add-icon {
+    order: 1;
+}
+
+.options-container .gear-icon {
+    order: 2;
+}
+
+.options-container .options-icon {
+    order: 3;
+    margin-right: 0;
+}
